@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Objeto de aprendizaje: recuperá el informe del laboratorio usando las etiquetas HTML h1 y p. Misión, puntos y feedback inmediato.">
+  <title>HTML EVIL · Recuperá el informe</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="topbar">
+    <a class="brand" href="#contenido">
+      <span class="brand-mark" aria-hidden="true">▣</span>
+      <div>
+        <strong>HTML <span>EVIL</span></strong>
+        <small>Objeto de Aprendizaje · Sprint 3</small>
+      </div>
+    </a>
+    <nav aria-label="Secciones del recurso">
+      <a href="#mision">Misión</a>
+      <a href="#aprender">Aprender</a>
+      <a href="#retos">Retos</a>
+      <a href="#cierre">Cierre</a>
+    </nav>
+  </header>
+
+  <main id="contenido">
+
+    <!-- PANEL DE PUNTAJE -->
+    <aside class="score-panel" id="puntaje" aria-live="polite">
+      <div class="score-item">
+        <span class="score-label">Integridad</span>
+        <strong id="puntos-value">0</strong>
+        <span>pts</span>
+      </div>
+      <div class="score-item">
+        <span class="score-label">Retos</span>
+        <strong id="retos-value">0</strong>
+        <span>/ 3</span>
+      </div>
+      <div class="barra" title="Progreso de la misión" aria-hidden="true">
+        <div id="progreso"></div>
+      </div>
+      <div class="score-item status" id="status-msg">
+        El laboratorio espera tu intervención…
+      </div>
+    </aside>
+
+    <!-- 1. MISIÓN / NARRATIVA -->
+    <section id="mision" class="hero">
+      <p class="eyebrow">Laboratorio Cero · Misión de recuperación</p>
+      <h1>Recuperá el informe.</h1>
+      <p class="lead">
+        El sistema del laboratorio perdió la estructura del informe.
+        Vos sos el <strong>agente de recuperación</strong>.
+        Tu misión: restaurar el título principal y el párrafo usando solo dos etiquetas de HTML.
+        Cada acierto suma puntos de integridad al sistema.
+      </p>
+      <p class="meta">
+        Nivel inicial · 15–20 minutos · Conocimientos previos: lectura y escritura básica ·
+        No se necesita saber programar
+      </p>
+    </section>
+
+    <!-- 2. OBJETIVO -->
+    <section id="objetivo">
+      <div class="panel">
+        <h2>Tu objetivo</h2>
+        <p>
+          Al terminar vas a poder <strong>escribir un título principal y un párrafo con HTML</strong>
+          usando <code>&lt;h1&gt;</code> y <code>&lt;p&gt;</code> con sus etiquetas de cierre.
+        </p>
+        <p>
+          <strong>Recorrido de la misión:</strong> primero aprendé las dos etiquetas;
+          después resolvé tres retos de recuperación; al final comprobá que el informe quedó estable.
+        </p>
+      </div>
+    </section>
+
+    <!-- 3. APRENDER -->
+    <section id="aprender">
+      <h2>Dos etiquetas para ordenar el texto</h2>
+      <p class="section-intro">
+        HTML permite organizar el contenido de una página web.
+        Una etiqueta indica qué función tiene cada parte del texto.
+      </p>
+
+      <div class="cards">
+        <article class="card">
+          <h3>El título principal</h3>
+          <p>El título principal presenta el tema de la página.</p>
+          <p>Usá <code>&lt;h1&gt;</code> al comienzo y <code>&lt;/h1&gt;</code> al final.</p>
+          <pre><code>&lt;h1&gt;Mi laboratorio&lt;/h1&gt;</code></pre>
+        </article>
+
+        <article class="card">
+          <h3>El párrafo</h3>
+          <p>El párrafo desarrolla una idea con una o más oraciones.</p>
+          <p>Usá <code>&lt;p&gt;</code> al comienzo y <code>&lt;/p&gt;</code> al final.</p>
+          <pre><code>&lt;p&gt;El equipo funciona.&lt;/p&gt;</code></pre>
+        </article>
+      </div>
+
+      <p style="margin-top:1.3rem">
+        La barra <code>/</code> marca el cierre.
+        El texto se escribe entre la etiqueta de apertura y la de cierre.
+        Al abrir la página, el navegador muestra el título y el párrafo sin las etiquetas.
+      </p>
+
+      <figure>
+        <img
+          src="etiquetas.png"
+          alt="Ejemplo visual: menor que p mayor que abre el párrafo; el texto va en el medio; menor que barra p mayor que cierra el párrafo."
+          width="1200"
+          height="420">
+        <figcaption>Las tres partes de un elemento: apertura, texto y cierre.</figcaption>
+      </figure>
+
+      <div class="panel" style="margin-top:1.5rem">
+        <h3 style="margin-top:0">Así se escribe el informe completo</h3>
+        <pre><code>&lt;h1&gt;Mi laboratorio&lt;/h1&gt;
+&lt;p&gt;El equipo funciona.&lt;/p&gt;</code></pre>
+      </div>
+    </section>
+
+    <!-- 4. RETOS -->
+    <section id="retos">
+      <h2>Tres retos de recuperación</h2>
+      <p class="section-intro">
+        Cada reto suma <strong>10 puntos de integridad</strong> si lo resolvés bien.
+        Podés reintentar sin penalización. El feedback aparece debajo de cada reto sin recargar la página.
+      </p>
+
+      <!-- RETO 1: Radio -->
+      <article class="challenge" id="reto-1">
+        <header class="challenge-head">
+          <span class="rune-badge">01</span>
+          <div>
+            <h3>Identificá la etiqueta del título</h3>
+            <p>El mapa del laboratorio pide reconocer el título principal.</p>
+          </div>
+        </header>
+
+        <form id="form-1" novalidate>
+          <fieldset>
+            <legend>¿Qué etiqueta se usa para el título principal?</legend>
+            <label>
+              <input type="radio" name="reto1" value="p">
+              A. <code>&lt;p&gt;</code>
+            </label>
+            <label>
+              <input type="radio" name="reto1" value="h1">
+              B. <code>&lt;h1&gt;</code>
+            </label>
+            <label>
+              <input type="radio" name="reto1" value="cierre-p">
+              C. <code>&lt;/p&gt;</code>
+            </label>
+          </fieldset>
+          <button type="submit" class="btn-primary" id="btn-1">Comprobar respuesta</button>
+        </form>
+        <div class="feedback" id="feedback-1" role="status" aria-live="polite"></div>
+      </article>
+
+      <!-- RETO 2: Texto -->
+      <article class="challenge" id="reto-2">
+        <header class="challenge-head">
+          <span class="rune-badge">02</span>
+          <div>
+            <h3>Completá el párrafo</h3>
+            <p>Escribí la misma letra en ambos espacios para formar un párrafo válido.</p>
+          </div>
+        </header>
+
+        <form id="form-2" novalidate>
+          <p style="margin:0 0 0.9rem"><code>&lt;___&gt;El laboratorio está listo.&lt;/___&gt;</code></p>
+          <div class="field-group">
+            <label for="apertura">Letra de la etiqueta de apertura</label>
+            <input type="text" id="apertura" name="apertura" maxlength="8" autocomplete="off" spellcheck="false" placeholder="ej.: p">
+          </div>
+          <div class="field-group">
+            <label for="cierre">Letra de la etiqueta de cierre</label>
+            <input type="text" id="cierre" name="cierre" maxlength="8" autocomplete="off" spellcheck="false" placeholder="ej.: p">
+          </div>
+          <button type="submit" class="btn-primary" id="btn-2">Comprobar respuesta</button>
+        </form>
+        <div class="feedback" id="feedback-2" role="status" aria-live="polite"></div>
+      </article>
+
+      <!-- RETO 3: Textarea -->
+      <article class="challenge" id="reto-3">
+        <header class="challenge-head">
+          <span class="rune-badge">03</span>
+          <div>
+            <h3>Repará el informe final</h3>
+            <p>El título está bien. El párrafo tiene un error en su etiqueta de cierre.</p>
+          </div>
+        </header>
+
+        <form id="form-3" novalidate>
+          <pre style="margin-bottom:1rem"><code>&lt;h1&gt;Sector asegurado&lt;/h1&gt;
+&lt;p&gt;El laboratorio funciona.&lt;/h1&gt;</code></pre>
+          <div class="field-group">
+            <label for="codigo">Escribí las dos líneas con el cierre correcto</label>
+            <textarea id="codigo" name="codigo" spellcheck="false" autocomplete="off" placeholder="Pegá o escribí aquí el código corregido"></textarea>
+          </div>
+          <button type="submit" class="btn-primary" id="btn-3">Comprobar respuesta</button>
+        </form>
+        <div class="feedback" id="feedback-3" role="status" aria-live="polite"></div>
+      </article>
+    </section>
+
+    <!-- 5. CIERRE -->
+    <section class="closing" id="cierre">
+      <div id="final-message" class="final-box" hidden>
+        <p class="eyebrow">Misión completada</p>
+        <h2>Informe recuperado · Sector asegurado</h2>
+        <p>
+          Lograste restaurar la estructura del informe.
+          Ahora sabés usar <code>&lt;h1&gt;</code> para el título principal y
+          <code>&lt;p&gt;</code> para el párrafo, con sus cierres correctos.
+        </p>
+        <p class="final-score">Integridad final: <strong id="final-puntos">0</strong> puntos</p>
+        <span class="badge">Recompensa · Agente de recuperación</span>
+      </div>
+
+      <p class="note">Podés reiniciar la misión cuando quieras para practicar de nuevo.</p>
+      <button type="button" id="btn-reset" class="btn-secondary">Reiniciar misión</button>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>HTML EVIL · Objeto de Aprendizaje · Braian Mosqueira · Módulo 1</p>
+    <p class="small">
+      Narrativa de acción / recuperación de laboratorio.
+      Estilos y lógica de misión diseñados para esta entrega.
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
